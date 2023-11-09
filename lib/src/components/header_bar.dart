@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class CustomHeaderBar extends StatelessWidget {
+class CustomHeaderBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomHeaderBar({
     Key? key,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -14,16 +15,21 @@ class CustomHeaderBar extends StatelessWidget {
           tooltip: 'Show Snackbar',
           onPressed: () {
             ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('This is a snackbar')));
+              const SnackBar(content: Text('This is a snackbar')),
+            );
           },
         ),
         IconButton(
-            icon: const Icon(Icons.navigate_next),
-            tooltip: 'Go to the next page',
-            onPressed: () => {}
-            //Navigator.pushNamed(context, AppBarExamplee.routeName),
-            ),
+          icon: const Icon(Icons.navigate_next),
+          tooltip: 'Go to the next page',
+          onPressed: () {
+            Navigator.of(context).pushNamed('/shows');
+          },
+        ),
       ],
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
