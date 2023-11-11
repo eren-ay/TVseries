@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../components/header_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -9,7 +8,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomHeaderBar(),
       body: Center(
         child: Text('Hello World! home screen'),
       ),

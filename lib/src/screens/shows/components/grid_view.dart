@@ -28,18 +28,22 @@ class Grid extends StatelessWidget {
           child: const Text("lalalal"),
         ),
         Scaffold(
-          body: Center(
-            child: FutureBuilder<Anime>(
-                future: futureAnime(),
-                builder: (context, snapshot) {
-                  if (snapshot.hasData) {
-                    return Text(snapshot.data!.title);
-                  } else if (snapshot.hasError) {
-                    return Text('${snapshot.error}');
-                  }
+          body: InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed('/');
+            },
+            child: Center(
+                child: FutureBuilder<Anime>(
+                    future: futureAnime(),
+                    builder: (context, snapshot) {
+                      if (snapshot.hasData) {
+                        return Text(snapshot.data!.title);
+                      } else if (snapshot.hasError) {
+                        return Text('${snapshot.error}');
+                      }
 
-                  return const CircularProgressIndicator();
-                }),
+                      return const CircularProgressIndicator();
+                    })),
           ),
         )
       ],
