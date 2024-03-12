@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'TVseries',
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false, // for debug just design material
-      initialRoute: '/shows',
+      initialRoute: '/login',
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }

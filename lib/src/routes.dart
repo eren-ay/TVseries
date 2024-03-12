@@ -1,3 +1,5 @@
+import 'package:tv_series/src/screens/login/login.dart';
+
 import 'screens/home/home_screen.dart';
 import 'screens/shows/shows_screen.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +13,7 @@ class RouteGenerator {
       case '/shows':
         return MaterialPageRoute(builder: (context) => const ShowsScreen());
       default:
-        return MaterialPageRoute(builder: (context) => const ShowsScreen());
+        return MaterialPageRoute(builder: (context) => const LoginScreen());
     }
   }
 }
