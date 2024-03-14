@@ -1,3 +1,4 @@
+import 'package:tv_series/src/constants/routes.dart';
 import 'package:tv_series/src/screens/login/login.dart';
 
 import 'screens/home/home_screen.dart';
@@ -8,10 +9,12 @@ class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     //final args = settings.arguments;
     switch (settings.name) {
-      case '/':
+      case homeScreenRoute:
         return MaterialPageRoute(builder: (context) => const HomeScreen());
-      case '/shows':
+      case showScreenRoute:
         return MaterialPageRoute(builder: (context) => const ShowsScreen());
+      case loginScreenRoute:
+        return MaterialPageRoute(builder: (context) => const LoginScreen());
       default:
         return MaterialPageRoute(builder: (context) => const LoginScreen());
     }

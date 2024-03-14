@@ -21,7 +21,7 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.input),
             title: const Text('Welcome'),
-            onTap: () => {},
+            onTap: () => {Navigator.pushNamed(context, '/shows')},
           ),
           ListTile(
             leading: const Icon(Icons.verified_user),
