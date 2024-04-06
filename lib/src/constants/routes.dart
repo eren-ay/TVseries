@@ -1,3 +1,5 @@
-const String homeScreenRoute = '/';
-const String showScreenRoute = '/shows';
-const String loginScreenRoute = '/login';
+const String homePageRoute = '/';
+const String showsPageRoute = '/shows';
+const String loginPageRoute = '/login';
+const String whoIsWatchingPageRoute = '/subuser';
+const String showDetailsPageRoute = 'showDetails';
